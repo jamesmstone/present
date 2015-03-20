@@ -34,7 +34,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -57,9 +57,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
+
 blockquote, q {
     quotes: none;
 }
@@ -250,11 +248,11 @@ a:focus {
     3D positioning along Z axis.
 */
 
-#title {
+ .title, #title {
     padding: 0;
 }
 
-#title .try {
+.title .try, #title .try {
     font-size: 64px;
     position: absolute;
     top: -0.5em;
@@ -267,7 +265,7 @@ a:focus {
     transform:         translateZ(20px);
 }
 
-#title h1 {
+.title h1, #title h1 {
     font-size: 190px;
 
     -webkit-transform: translateZ(50px);
@@ -277,7 +275,7 @@ a:focus {
     transform:         translateZ(50px);
 }
 
-#title .footnote {
+.title .footnote, #title .footnote {
     font-size: 32px;
 }
 
@@ -633,7 +631,7 @@ a:focus {
 /*
     ... and we will show it when the first step (with id 'bored') is active.
 */
-.impress-on-bored .hint {
+.impress-on-intro .hint {
     /*
         We remove the transparency and position the hint in its default fixed
         position.
@@ -647,7 +645,7 @@ a:focus {
     transform:         translateY(0px);
 
     /*
-        Now for fade in transition we have the oposite situation from the one
+        Now for fade in transition we have the opposite situation from the one
         above.
 
         First after 4.5s delay we animate the transform property to move the hint
@@ -684,20 +682,3 @@ a:focus {
 */
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
-
-/*
-    There is one funny thing I just realized.
-
-    Thanks to this workaround above everything except #impress element is invisible
-    for click events. That means that the hint element is also not clickable.
-    So basically all of this transforms and delayed transitions trickery was probably
-    not needed at all...
-
-    But it was fun to learn about it, wasn't it?
-*/
-
-/*
-    That's all I have for you in this file.
-    Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
-    for you.
-*/
