@@ -225,7 +225,7 @@ a:focus {
     letter-spacing: -1px;
 }
 
-.slide q {
+.slide p {
     display: block;
     font-size: 50px;
     line-height: 72px;
@@ -233,7 +233,7 @@ a:focus {
     margin-top: 100px;
 }
 
-.slide q strong {
+.slide p strong {
     white-space: nowrap;
 }
 
@@ -407,7 +407,7 @@ a:focus {
     background-repeat: no-repeat;
 }
 
-#source q {
+#source p {
     font-size: 60px;
 }
 
